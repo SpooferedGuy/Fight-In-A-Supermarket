@@ -1,1 +1,1324 @@
-local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/SpooferedGuy/UI-Library-Spoof/main/Ui-Library.lua"))();local v1=v0({Title="Spoof Hub, by SpooferedGuy",ScriptName="SpoofHub - Fight In A Supermarket"});local v2=v1.CreateTab("Combat⚔️");local v3=v1.CreateTab("Farm⚡");local v4=v1.CreateTab("Shop🛒");local v5=v1.CreateTab("Player👤");local v6=game:GetService("Players");local v7=game:GetService("VirtualUser");local v8=v6.LocalPlayer;local v9=false;local function v10() local v121=v8.Character;if  not v121 then return nil;end local v122=v121:FindFirstChild("HumanoidRootPart");if  not v122 then return nil;end local v123,v124=nil,math.huge;for v240,v241 in ipairs(v6:GetPlayers()) do if ((v241~=v8) and v241.Character) then local v269=0;local v270;local v271;while true do if (v269==0) then v270=v241.Character:FindFirstChild("HumanoidRootPart");v271=v241.Character:FindFirstChildOfClass("Humanoid");v269=2 -1 ;end if (v269==(1637 -(1373 + 263))) then if (v270 and v271 and (v271.Health>(0 -0))) then local v376=1000 -(451 + 549) ;local v377;while true do if (v376==(0 + 0)) then v377=(v270.Position-v122.Position).Magnitude;if (v377<v124) then local v406=0 + 0 ;while true do if (v406==(0 -0)) then v124=v377;v123=v270;break;end end end break;end end end break;end end end end return v123;end local function v11() while v9 do local v242=0 -0 ;local v243;while true do if (v242==(1385 -(746 + 638))) then if v243 then local v362=0 + 0 ;local v363;while true do if (v362==(0 + 0)) then v363=v243:FindFirstChild("WeaponHitEvent");if v363 then local v400=0 -0 ;local v401;local v402;while true do if (v400==(0 + 0)) then v401=workspace:FindFirstChild("Spawners") and workspace.Spawners:FindFirstChild("HittableSpawn") and workspace.Spawners.HittableSpawn:FindFirstChild("Hittable") and workspace.Spawners.HittableSpawn.Hittable:FindFirstChild("Hitbox") ;if v401 then pcall(function() v363:FireServer(v401);end);end v400=342 -(218 + 123) ;end if (v400==(1582 -(1535 + 46))) then v402=v10();if v402 then pcall(function() v363:FireServer(v402);end);end break;end end end break;end end end break;end if (v242==(765 -(574 + 191))) then task.wait(0.1 + 0 );v243=v8.Character and v8.Character:FindFirstChildOfClass("Tool") ;v242=2 -1 ;end end end end v2.AddToggle("Kill Aura",false,function(v125) local v126=0 + 0 ;while true do if (v126==(0 + 0)) then v9=v125;if v125 then task.spawn(v11);end break;end end end);local v12=15 + 85 ;local v6=game:GetService("Players");local v13=game:GetService("RunService");local v14=v6.LocalPlayer;local v15,v16,v17;local v18=nil;local v19=false;local function v20(v127) local v128=126 -(55 + 71) ;while true do if (v128==(561 -(306 + 254))) then v17=v15:WaitForChild("Humanoid");break;end if (v128==(0 + 0)) then v15=v127;v16=v15:WaitForChild("HumanoidRootPart");v128=1 -0 ;end end end v20(v14.Character or v14.CharacterAdded:Wait() );v14.CharacterAdded:Connect(function(v129) v20(v129);end);local function v21() local v130=1467 -(899 + 568) ;local v131;local v132;while true do if ((1 + 0)==v130) then v132=v12;for v336,v337 in ipairs(v6:GetPlayers()) do if ((v337~=v14) and v337.Character and v337.Character:FindFirstChild("HumanoidRootPart") and v337.Character:FindFirstChildOfClass("Humanoid") and (v337.Character.Humanoid.Health>(0 -0))) then local v364=0 + 0 ;local v365;local v366;while true do if (v364==(0 -0)) then v365=v337.Character.HumanoidRootPart;v366=(v16.Position-v365.Position).Magnitude;v364=604 -(268 + 335) ;end if (v364==(291 -(60 + 230))) then if (v366<v132) then v131=v337;v132=v366;end break;end end end end v130=574 -(426 + 146) ;end if (v130==0) then if  not v16 then return nil;end v131=nil;v130=1 + 0 ;end if (v130==(1458 -(282 + 1174))) then return v131;end end end local function v22() local v133=811 -(569 + 242) ;while true do if (v133==(0 -0)) then if v18 then return;end v18=v13.Heartbeat:Connect(function() local v338=0 + 0 ;local v339;while true do if (v338==(1025 -(706 + 318))) then if (v339 and v339.Character) then local v387=732 -(16 + 716) ;local v388;while true do if (v387==(0 -0)) then v388=v339.Character:FindFirstChild("HumanoidRootPart");if v388 then v16.CFrame=CFrame.lookAt(v16.Position,Vector3.new(v388.Position.X,v16.Position.Y,v388.Position.Z));end break;end end end break;end if (v338==(1251 -(721 + 530))) then if ( not v19 or  not v16) then return;end v339=v21();v338=1272 -(945 + 326) ;end end end);break;end end end local function v23() if v18 then local v262=0;while true do if (v262==0) then v18:Disconnect();v18=nil;break;end end end end v2.AddToggle("Hit aimbot",false,function(v134) v19=v134;if v134 then v22();else v23();end end);local v7=game:GetService("VirtualUser");local v24=false;local v25=nil;local function v26() local v135=0 -0 ;while true do if (v135==(285 -(175 + 110))) then if v25 then return;end v25=task.spawn(function() local v340=0 + 0 ;while true do if (v340==(700 -(271 + 429))) then while v24 do local v378=0;while true do if (v378==(1 + 0)) then task.wait(1500.1 -(1408 + 92) );break;end if (v378==(1086 -(461 + 625))) then v7:Button1Down(Vector2.new(0,1288 -(993 + 295) ),workspace.CurrentCamera.CFrame);v7:Button1Up(Vector2.new(0 + 0 ,0 + 0 ),workspace.CurrentCamera.CFrame);v378=1172 -(418 + 753) ;end end end v25=nil;break;end end end);break;end end end local function v27() local v136=0 + 0 ;while true do if ((0 + 0)==v136) then v24=false;if v25 then local v346=0 + 0 ;while true do if (v346==(0 + 0)) then pcall(function() task.cancel(v25);end);v25=nil;break;end end end break;end end end v2.AddToggle("Auto Click",false,function(v137) v24=v137;if v137 then v26();else v27();end end);local v28=4 + 11 ;local v29=10529 -(406 + 123) ;local v30=11 -8 ;local v31=1772 -(1749 + 20) ;local v32=2 + 4 ;local v33=1322.15 -(1249 + 73) ;local v34=0.1 + 0 ;local v35=nil;local v36=nil;local v37=nil;local v38=nil;local v39=nil;local v40=false;local v41=false;local v42={};local v43=nil;local function v44() local v138=0;local v139;local v140;local v141;while true do if (v138==(1 -0)) then v140=v139:FindFirstChildOfClass("Humanoid");v141=v139:FindFirstChild("HumanoidRootPart");v138=1 + 1 ;end if (v138==(1147 -(466 + 679))) then return v139,v140,v141;end if (v138==(405 -(255 + 150))) then v139=v8.Character;if  not v139 then return nil,nil,nil;end v138=2 -1 ;end end end local function v45(v142,v143) local v144=0 + 0 ;local v145;local v146;while true do if (v144==(0 + 0)) then v145=v142.X-v143.X ;v146=v142.Z-v143.Z ;v144=2 -1 ;end if (v144==(1901 -(106 + 1794))) then return math.sqrt((v145 * v145) + (v146 * v146) );end end end local function v46(v147) local v148=0 + 0 ;while true do if (v148==(1 + 0)) then v36.Anchored=true;v36.CanCollide=true;v36.CanTouch=false;v36.CanQuery=false;v148=5 -3 ;end if (v148==(406 -(183 + 223))) then if (v36 and v36.Parent) then return;end v36=Instance.new("Part");v36.Name="SpoofHub_AutoWalkPlatform";v36.Size=Vector3.new(v29,2 -1 ,v29);v148=115 -(4 + 110) ;end if (v148==(586 -(57 + 527))) then v36.Transparency=1428 -(41 + 1386) ;v36.CFrame=CFrame.new(v147.Position.X,(v147.Position.Y-v28) -v30 ,v147.Position.Z);v36.Parent=workspace;break;end end end local function v47() if v36 then pcall(function() v36:Destroy();end);v36=nil;end end local function v48(v149) if ( not v149 or  not v149.Parent) then return;end v42={};for v244,v245 in ipairs(v149:GetDescendants()) do if v245:IsA("BasePart") then local v282=103 -(17 + 86) ;while true do if (v282==(0 + 0)) then v42[v245]=v245.CanCollide;v245.CanCollide=false;break;end end end end end local function v49(v150) if  not v150 then local v263=0;while true do if (v263==(0 -0)) then v42={};return;end end end for v246,v247 in pairs(v42) do if (v246 and v246.Parent) then pcall(function() v246.CanCollide=v247;end);end end v42={};end local function v50(v151) local v152,v152,v153=v44();if  not v153 then return nil;end local v154=nil;local v155=math.huge;for v248,v249 in ipairs(workspace:GetDescendants()) do if (v249:IsA("BasePart") and (v249.Name==v151) and v249.Parent) then local v283=0 -0 ;local v284;while true do if (v283==(166 -(122 + 44))) then v284=v45(v249.Position,v153.Position);if (v284<v155) then local v379=0 -0 ;while true do if (v379==(0 -0)) then v155=v284;v154=v249;break;end end end break;end end end end return v154;end local function v51() if v38 then pcall(function() task.cancel(v38);end);v38=nil;end end local function v52() local v156=0 + 0 ;while true do if (v156==(0 + 0)) then if v38 then return;end v38=task.spawn(function() while (v35=="hittable") and  not v40  do local v347=workspace.CurrentCamera;if v347 then pcall(function() v7:Button1Down(Vector2.new(0,0 -0 ),v347.CFrame);v7:Button1Up(Vector2.new(0 + 0 ,65 -(30 + 35) ),v347.CFrame);end);end task.wait(v34);end v38=nil;end);break;end end end local function v53() local v157=0 + 0 ;local v158;local v159;while true do if (v157==(1258 -(1043 + 214))) then v158,v158,v159=v44();if v159 then local v348=0 -0 ;while true do if (v348==(1212 -(323 + 889))) then v159.CFrame=v159.CFrame + Vector3.new(0 -0 ,v28,0 + 0 ) ;v40=false;break;end end end v157=582 -(361 + 219) ;end if (v157==(320 -(53 + 267))) then if (v41 or  not v40) then return;end v41=true;v157=1 + 0 ;end if (v157==(415 -(15 + 398))) then task.wait(v33);v41=false;break;end end end local function v54() local v160=982 -(18 + 964) ;local v161;local v162;while true do if (v160==(0 -0)) then if (v41 or v40) then return;end v41=true;v160=1 + 0 ;end if (2==v160) then task.wait(v33);v41=false;break;end if (v160==(1 + 0)) then v161,v161,v162=v44();if v162 then local v349=850 -(20 + 830) ;while true do if (v349==(0 + 0)) then v162.CFrame=v162.CFrame-Vector3.new(1790 -(1010 + 780) ,v28,0) ;v40=true;break;end end end v160=128 -(116 + 10) ;end end end local function v55(v163) local v164=0 + 0 ;local v165;local v166;local v167;local v168;while true do if (v164==(740 -(542 + 196))) then v168=Vector3.new(v163.Position.X,v167.Position.Y,v163.Position.Z);if (v45(v167.Position,v168)<=v31) then local v350=1836 -(1045 + 791) ;while true do if (v350==(0 -0)) then v166:MoveTo(v167.Position);return;end end end v164=1 + 2 ;end if (v164==1) then if (v166.Health<=(0 + 0)) then return;end if ( not v163 or  not v163.Parent) then return;end v164=1 + 1 ;end if (v164==(0 -0)) then v165,v166,v167=v44();if ( not v166 or  not v167) then return;end v164=2 -1 ;end if ((1562 -(1381 + 178))==v164) then v166:MoveTo(v168);break;end end end local function v56() local v169=1551 -(1126 + 425) ;local v170;local v171;local v172;while true do if (v169==(405 -(118 + 287))) then v170,v171,v172=v44();if  not v172 then return;end v169=3 -2 ;end if ((1123 -(118 + 1003))==v169) then if v171 then v171:MoveTo(v172.Position);end break;end if ((2 -1)==v169) then if v43 then local v351=0;local v352;while true do if (v351==(377 -(142 + 235))) then v352=v43-v172.Position.Y ;v172.CFrame=v172.CFrame + Vector3.new(470 -(381 + 89) ,v352,0 + 0 ) ;break;end end end v40=false;v169=9 -7 ;end end end local function v57() local v173=0 + 0 ;local v174;while true do if (v173==0) then v35=nil;v51();if v37 then pcall(function() task.cancel(v37);end);v37=nil;end v41=false;v173=978 -(553 + 424) ;end if (v173==(1 -0)) then v39=nil;v56();v174=v8.Character;if v174 then v49(v174);else v42={};end v173=3 -1 ;end if (v173==(2 + 0)) then v47();v43=nil;v40=false;break;end end end local function v58(v175,v176) v57();local v177,v178,v179=v44();if ( not v177 or  not v178 or  not v179) then return;end if (v178.Health<=(0 + 0)) then return;end v35=v176;v43=v179.Position.Y;v39=nil;v40=false;v41=false;v46(v179);v48(v177);v179.CFrame=v179.CFrame-Vector3.new(0 + 0 ,v28,0 + 0 ) ;v40=true;v37=task.spawn(function() local v250=0 + 0 ;while true do if (v250==(0 + 0)) then while v35==v176  do task.wait(0.15);local v353,v354,v355=v44();if ( not v353 or  not v354 or  not v355 or (v354.Health<=(0 -0))) then break;end if (v39 and  not v39.Parent) then v39=nil;end local v356=v50(v175);if v356 then if  not v39 then v39=v356;else local v389=0 -0 ;local v390;local v391;while true do if (v389==(1727 -(1668 + 58))) then if (v391<v390) then v39=v356;end break;end if (v389==(0 -0)) then v390=v45(v39.Position,v355.Position);v391=v45(v356.Position,v355.Position);v389=627 -(512 + 114) ;end end end end if ( not v39 or  not v39.Parent) then if ((v176=="hittable") and  not v40) then local v392=0 -0 ;while true do if (v392==(0 + 0)) then v51();v54();break;end end end continue;end local v357=v45(v39.Position,v355.Position);if (v176=="hittable") then if (v357<=v32) then if v40 then v53();end v52();v354:MoveTo(v355.Position);else local v393=0 -0 ;while true do if (v393==(4 -3)) then v55(v39);break;end if ((0 + 0)==v393) then v51();if  not v40 then v54();end v393=1;end end end elseif (v176=="money") then local v394=0 + 0 ;while true do if (v394==(753 -(239 + 514))) then v55(v39);if (v357<=v31) then v39=nil;end break;end end end end if (v35==v176) then v57();end break;end end end);end v3.AddSection("Auto Walk");v3.AddToggle("Auto Money",false,function(v182) if v182 then local v264=1994 -(109 + 1885) ;while true do if ((1469 -(1269 + 200))==v264) then v57();v58("MoneyHitbox","money");break;end end elseif (v35=="money") then v57();end end);v3.AddToggle("Auto ATM",false,function(v183) if v183 then local v265=0 + 0 ;while true do if (v265==(1329 -(797 + 532))) then v57();v58("HittableHit","hittable");break;end end elseif (v35=="hittable") then v57();end end);local v59=false;local v60=Instance.new("Folder");v60.Name="SpoofHub_CombatESP";v60.Parent=game.CoreGui;local function v64() for v251,v252 in ipairs(v60:GetChildren()) do pcall(function() v252:Destroy();end);end end local function v65(v184) local v185=0 + 0 ;while true do if (v185==(828 -(802 + 24))) then if v184:FindFirstChild("SpoofHub_CombatHighlight") then return;end pcall(function() local v342=0 -0 ;local v343;while true do if (v342==(3 -0)) then v343.OutlineTransparency=0 + 0 ;v343.Parent=v184;break;end if (v342==(0 + 0)) then v343=Instance.new("Highlight");v343.Name="SpoofHub_CombatHighlight";v342=1 + 0 ;end if (v342==(1 + 1)) then v343.OutlineColor=Color3.fromRGB(709 -454 ,0 -0 ,0 + 0 );v343.FillTransparency=0.5 -0 ;v342=1205 -(373 + 829) ;end if (v342==(732 -(476 + 255))) then v343.Adornee=v184;v343.FillColor=Color3.fromRGB(255,1130 -(369 + 761) ,0 + 0 );v342=2 + 0 ;end end end);break;end if (v185==(1 -0)) then if (v184==v8.Character) then return;end if  not v184:FindFirstChildOfClass("Humanoid") then return;end v185=9 -7 ;end if (v185==(0 -0)) then if  not v59 then return;end if ( not v184 or  not v184.Parent) then return;end v185=1620 -(1427 + 192) ;end end end local function v66() local v186=0 + 0 ;while true do if ((238 -(64 + 174))==v186) then if  not v59 then return;end for v344,v345 in ipairs(v6:GetPlayers()) do if (v345~=v8) then if v345.Character then v65(v345.Character);end end end break;end end end v2.AddToggle("ESP Highlight",false,function(v187) v59=v187;if v187 then v66();else v64();for v286,v287 in ipairs(v6:GetPlayers()) do if v287.Character then local v358=v287.Character:FindFirstChild("SpoofHub_CombatHighlight");if v358 then pcall(function() v358:Destroy();end);end end end end end);for v188,v189 in ipairs(v6:GetPlayers()) do if (v189~=v8) then v189.CharacterAdded:Connect(function(v288) task.wait(0.3 + 0 );if v59 then v65(v288);end end);end end local v67=game:GetService("Workspace");local v6=game:GetService("Players");local v68=v6.LocalPlayer;local v69=v68:WaitForChild("PlayerGui");local v70=false;local v71=false;local v72=false;local v73=Instance.new("Folder");v73.Name="ShopESP";v73.Parent=v67;local v76=Instance.new("ScreenGui");v76.Name="HighestPriceNotification";v76.ResetOnSpawn=false;v76.Parent=v69;local v80=Instance.new("TextLabel");v80.Name="HighestPrice";v80.AnchorPoint=Vector2.new(0.5 + 0 ,0 -0 );v80.Position=UDim2.new(336.5 -(144 + 192) ,326 -(192 + 134) ,216 -(42 + 174) ,0);v80.Size=UDim2.fromOffset(226 + 74 ,38 + 7 );v80.BackgroundColor3=Color3.fromRGB(9 + 11 ,1524 -(363 + 1141) ,19 + 1 );v80.BackgroundTransparency=0.15 -0 ;v80.BorderSizePixel=1580 -(1183 + 397) ;v80.TextColor3=Color3.fromRGB(776 -521 ,60,60);v80.TextStrokeColor3=Color3.fromRGB(0 + 0 ,0 + 0 ,1975 -(1913 + 62) );v80.TextStrokeTransparency=0 -0 ;v80.Font=Enum.Font.GothamBold;v80.TextSize=30;v80.Text="";v80.Visible=false;v80.Parent=v76;local v97=Instance.new("UICorner");v97.CornerRadius=UDim.new(0 + 0 ,26 -16 );v97.Parent=v80;local function v100(v190) return (v190.B>(v190.R * (1934.5 -(565 + 1368)))) and (v190.B>(v190.G * (0.95 + 0))) ;end local function v101(v191) return (v191.R>(v191.B * (3.5 -2))) and (v191.G>(v191.B * (1662.5 -(1477 + 184)))) and (v191.R>(0.5 -0)) and (v191.G>0.5) ;end local function v102(v192) local v193=0 + 0 ;local v194;while true do if (v193==(857 -(564 + 292))) then v194=v194:gsub(",","");return tonumber(v194);end if (v193==0) then v194=v192:match("%$%s*([%d%.,]+)");if  not v194 then return nil;end v193=1 + 0 ;end end end local function v103(v195,v196,v197,v198) local v199=0 -0 ;local v200;local v201;local v202;while true do if ((0 -0)==v199) then if  not v195:IsA("TextLabel") then return;end if v195:FindFirstAncestor("ShopESP") then return;end if  not string.find(v195.Text,"$",2 -1 ,true) then return;end v200=v195:FindFirstAncestorWhichIsA("BasePart");v199=305 -(244 + 60) ;end if (v199==(1774 -(1733 + 39))) then v201.Size=UDim2.fromOffset(31 + 9 ,516 -(41 + 435) );v201.StudsOffset=Vector3.new(1001 -(938 + 63) ,2.5 + 0 ,1125 -(936 + 189) );v201.AlwaysOnTop=true;v201.MaxDistance=135 + 165 ;v199=3 -0 ;end if (v199==(3 + 0)) then v201.Parent=v73;v202=Instance.new("TextLabel");v202.Size=UDim2.fromScale(1 + 0 ,1614 -(1565 + 48) );v202.BackgroundTransparency=96 -(51 + 44) ;v199=3 + 1 ;end if ((2 + 2)==v199) then v202.Text=v195.Text;v202.TextColor3=v196;v202.Font=v195.Font;v202.TextSize=1158 -(782 + 356) ;v199=272 -(176 + 91) ;end if (v199==(2 -1)) then if  not v200 then return;end v201=Instance.new("BillboardGui");v201.Name=v197   .. "_"   .. v198 ;v201.Adornee=v200;v199=2 -0 ;end if (v199==(3 + 2)) then v202.TextScaled=false;v202.TextStrokeColor3=v195.TextStrokeColor3;v202.TextStrokeTransparency=v195.TextStrokeTransparency;v202.Parent=v201;break;end end end local function v104(v203,v204) local v205=0;local v206;local v207;while true do if (v205==(1097 -(975 + 117))) then v207.TextStrokeColor3=Color3.new(1875 -(157 + 1718) ,0 + 0 ,1905 -(830 + 1075) );v207.TextStrokeTransparency=0 -0 ;v207.Parent=v206;break;end if ((3 -2)==v205) then v206.Size=UDim2.fromOffset(1418 -(697 + 321) ,272 -172 );v206.StudsOffset=Vector3.new(0 + 0 ,10 -5 ,0 -0 );v206.AlwaysOnTop=true;v205=4 -2 ;end if (v205==(0 -0)) then v206=Instance.new("BillboardGui");v206.Name="HighestPriceESP";v206.Adornee=v204;v205=1;end if (3==v205) then v207.Size=UDim2.fromScale(1,1 + 0 );v207.BackgroundTransparency=1 -0 ;v207.Text=v203.Text;v205=10 -6 ;end if (v205==(1229 -(322 + 905))) then v206.MaxDistance=1611 -(602 + 9) ;v206.Parent=v73;v207=Instance.new("TextLabel");v205=1192 -(449 + 740) ;end if (v205==(876 -(826 + 46))) then v207.TextColor3=Color3.fromRGB(1202 -(245 + 702) ,1248 -(111 + 1137) ,158 -(91 + 67) );v207.Font=Enum.Font.GothamBold;v207.TextSize=148 -98 ;v205=2 + 3 ;end end end local function v105(v208) local v209=0 -0 ;while true do if (v209==(0 + 0)) then v80.Text="highest price: "   .. v208 ;v80.Visible=true;break;end end end local function v106() v80.Text="";v80.Visible=false;end local function v107() v73:ClearAllChildren();end local function v108() v107();local v212=1898 -(260 + 1638) ;local v213= -math.huge;local v214=nil;local v215=nil;for v253,v254 in ipairs(v67:GetDescendants()) do if (v254:IsA("TextLabel") and  not v254:FindFirstAncestor("ShopESP")) then local v330=440 -(382 + 58) ;local v331;while true do if (v330==0) then v331=v102(v254.Text);if v331 then local v383=0;local v384;while true do if (v383==(2 -1)) then if (v70 and v100(v254.TextColor3)) then v212+=(1 + 0) v103(v254,v254.TextColor3,"Blue",v212);end if (v71 and v101(v254.TextColor3)) then local v407=0 -0 ;while true do if (v407==(0 + 0)) then v212+=(1 -0) v103(v254,v254.TextColor3,"Yellow",v212);break;end end end break;end if ((0 -0)==v383) then v384=v254:FindFirstAncestorWhichIsA("BasePart");if (v384 and (v331>v213)) then local v408=0;while true do if (v408==(1205 -(902 + 303))) then v213=v331;v214=v254;v408=1 -0 ;end if (v408==(2 -1)) then v215=v384;break;end end end v383=1 + 0 ;end end end break;end end end end if (v72 and v214 and v215) then v104(v214,v215);v105(v214.Text);else v106();end end task.spawn(function() while true do local v255=1690 -(1121 + 569) ;while true do if (v255==(214 -(22 + 192))) then task.wait(5);if (v70 or v71 or v72) then v108();end break;end end end end);v4.AddToggle("ESP Blue",false,function(v216) v70=v216;v108();end);v4.AddToggle("ESP Yellow",false,function(v217) local v218=683 -(483 + 200) ;while true do if (v218==(32 -(19 + 13))) then v71=v217;v108();break;end end end);v4.AddToggle("ESP Highest Price",false,function(v219) local v220=0 -0 ;while true do if ((1463 -(1404 + 59))==v220) then v72=v219;v108();break;end end end);local v109=false;local v42={};v5.AddToggle("NoClip",false,function(v221) local v222=0;local v223;while true do if (v222==(2 -1)) then if  not v223 then return;end if v221 then local v359=0 -0 ;while true do if (v359==(0 + 0)) then v42={};for v395,v396 in ipairs(v223:GetDescendants()) do if v396:IsA("BasePart") then v42[v396]=v396.CanCollide;v396.CanCollide=false;end end break;end end else local v360=0;while true do if (v360==(0 -0)) then for v397,v398 in pairs(v42) do if (v397 and v397.Parent) then v397.CanCollide=v398;end end v42={};break;end end end break;end if (v222==(0 -0)) then v109=v221;v223=v8.Character;v222=1 -0 ;end end end);v13.Stepped:Connect(function() if (v109 and v8.Character) then for v333,v334 in ipairs(v8.Character:GetDescendants()) do if v334:IsA("BasePart") then v334.CanCollide=false;end end end end);local v6=game:GetService("Players");local v13=game:GetService("RunService");local v14=v6.LocalPlayer;local v110=false;local v111=1828 -(1293 + 519) ;local v112;local v113;local v114;local function v115() local v224=0 -0 ;local v225;local v226;while true do if (v224==(0 -0)) then v225,v226=pcall(function() return require(v14:WaitForChild("PlayerScripts"):WaitForChild("PlayerModule"):WaitForChild("ControlModule"));end);return (v225 and v226) or nil ;end end end local v116=v115();local function v117() local v227=v14.Character or v14.CharacterAdded:Wait() ;return v227:WaitForChild("HumanoidRootPart");end local function v118() v110=false;if v114 then local v266=0;while true do if (v266==0) then v114:Disconnect();v114=nil;break;end end end if v112 then local v267=765 -(468 + 297) ;while true do if ((562 -(334 + 228))==v267) then v112:Destroy();v112=nil;break;end end end if v113 then local v268=0;while true do if (v268==0) then v113:Destroy();v113=nil;break;end end end end local function v119() local v228=v117();v118();v110=true;v112=Instance.new("BodyVelocity");v112.MaxForce=Vector3.new(8918614658 -  -81384830 ,8999999488 -0 ,10629599011 -1629599523 );v112.Velocity=Vector3.zero;v112.Parent=v228;v113=Instance.new("BodyGyro");v113.MaxTorque=Vector3.new(8999999488 -0 ,9341650591 -341651103 ,10239050679 -1239051191 );v113.P=32111 -22111 ;v113.CFrame=v228.CFrame;v113.Parent=v228;v114=v13.Heartbeat:Connect(function() if ( not v110 or  not v112 or  not v113) then return;end if  not v228.Parent then v118();return;end local v256=workspace.CurrentCamera;if  not v256 then return;end local v257=Vector3.zero;if v116 then v257=v116:GetMoveVector();end local v258=Vector3.zero;if (v257.Magnitude>(0 + 0)) then local v335=v256.CFrame:VectorToWorldSpace(v257);if (v335.Magnitude>(236 -(141 + 95))) then v258=v335.Unit * v111 ;end end v112.Velocity=v258;v113.CFrame=v256.CFrame;end);end local function v120(v238) if v238 then v119();else v118();end end v5.AddToggle("Fly",false,function(v239) v120(v239);end);v14.CharacterAdded:Connect(function() v118();end);
+local Build = loadstring(game:HttpGet("https://raw.githubusercontent.com/SpooferedGuy/UI-Library-Spoof/main/Ui-Library.lua"))()
+local UI = Build({
+    Title = "Spoof Hub, by SpooferedGuy",
+    ScriptName = "SpoofHub - Fight In A Supermarket",
+})
+
+local CombatTab = UI.CreateTab("Combat⚔️")
+local FarmTab = UI.CreateTab("Farm⚡")
+local ShopTab = UI.CreateTab("Shop🛒")
+local PlayerTab = UI.CreateTab("Player👤")
+
+-- ============ SERVIÇOS ============
+local Players = game:GetService("Players")
+local VirtualUser = game:GetService("VirtualUser")
+local LocalPlayer = Players.LocalPlayer
+
+-- ============ AUTO HIT ============
+local running = false
+
+local function getClosestPlayer()
+    local char = LocalPlayer.Character
+    if not char then return nil end
+    local myRoot = char:FindFirstChild("HumanoidRootPart")
+    if not myRoot then return nil end
+    
+    local closest, shortest = nil, math.huge
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character then
+            local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+            local hum = player.Character:FindFirstChildOfClass("Humanoid")
+            if hrp and hum and hum.Health > 0 then
+                local dist = (hrp.Position - myRoot.Position).Magnitude
+                if dist < shortest then
+                    shortest = dist
+                    closest = hrp
+                end
+            end
+        end
+    end
+    return closest
+end
+
+local function loop()
+    while running do
+        task.wait(0.1)
+        local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Tool")
+        if tool then
+            local remote = tool:FindFirstChild("WeaponHitEvent")
+            if remote then
+                local hitbox = workspace:FindFirstChild("Spawners")
+                    and workspace.Spawners:FindFirstChild("HittableSpawn")
+                    and workspace.Spawners.HittableSpawn:FindFirstChild("Hittable")
+                    and workspace.Spawners.HittableSpawn.Hittable:FindFirstChild("Hitbox")
+                
+                if hitbox then
+                    pcall(function() remote:FireServer(hitbox) end)
+                end
+                
+                local closest = getClosestPlayer()
+                if closest then
+                    pcall(function() remote:FireServer(closest) end)
+                end
+            end
+        end
+    end
+end
+
+CombatTab.AddToggle("Kill Aura", false, function(value)
+        running = value
+        if value then task.spawn(loop) end
+    end)
+
+-- AIMBOT RANGE
+local aimbotRange = 100
+
+-- SERVICES
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+
+-- VARIÁVEIS DINÂMICAS
+local char, root, humanoid
+
+-- CONNECTION
+local aimConnection = nil
+local aimbotEnabled = false
+
+-- ATUALIZA PERSONAGEM
+local function updateCharacter(character)
+    char = character
+    root = char:WaitForChild("HumanoidRootPart")
+    humanoid = char:WaitForChild("Humanoid")
+end
+
+-- INICIAL
+updateCharacter(player.Character or player.CharacterAdded:Wait())
+
+-- RESPAWN FIX
+player.CharacterAdded:Connect(function(character)
+    updateCharacter(character)
+end)
+
+-- GET CLOSEST TARGET
+local function getClosestAimbotTarget()
+    if not root then return nil end
+    
+    local closestPlayer = nil
+    local shortestDist = aimbotRange
+    
+    for _, p in ipairs(Players:GetPlayers()) do
+        if p ~= player 
+        and p.Character 
+        and p.Character:FindFirstChild("HumanoidRootPart") 
+        and p.Character:FindFirstChildOfClass("Humanoid") 
+        and p.Character.Humanoid.Health > 0 then
+            
+            local targetHRP = p.Character.HumanoidRootPart
+            local dist = (root.Position - targetHRP.Position).Magnitude
+            
+            if dist < shortestDist then
+                closestPlayer = p
+                shortestDist = dist
+            end
+        end
+    end
+    
+    return closestPlayer
+end
+
+-- START
+local function startAimbot()
+    if aimConnection then return end
+
+    aimConnection = RunService.Heartbeat:Connect(function()
+        if not aimbotEnabled or not root then return end
+
+        local target = getClosestAimbotTarget()
+        
+        if target and target.Character then
+            local targetHrp = target.Character:FindFirstChild("HumanoidRootPart")
+            
+            if targetHrp then
+                root.CFrame = CFrame.lookAt(
+                    root.Position,
+                    Vector3.new(targetHrp.Position.X, root.Position.Y, targetHrp.Position.Z)
+                )
+            end
+        end
+    end)
+end
+
+-- STOP
+local function stopAimbot()
+    if aimConnection then
+        aimConnection:Disconnect()
+        aimConnection = nil
+    end
+end
+
+-- TOGGLE
+CombatTab.AddToggle("Hit aimbot", false, function(Value)
+        aimbotEnabled = Value
+        
+        if Value then
+            startAimbot()
+        else
+            stopAimbot()
+        end
+    end)
+
+-- ============ SERVIÇOS ============
+local VirtualUser = game:GetService("VirtualUser")
+
+-- ============ ESTADO ============
+local autoClickAtivo = false
+local threadClick = nil
+
+-- ============ AUTO CLICK ============
+local function iniciarAutoClick()
+    if threadClick then return end
+    
+    threadClick = task.spawn(function()
+        while autoClickAtivo do
+            VirtualUser:Button1Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            VirtualUser:Button1Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            task.wait(0.1)
+        end
+        threadClick = nil
+    end)
+end
+
+local function pararAutoClick()
+    autoClickAtivo = false
+    if threadClick then
+        pcall(function() task.cancel(threadClick) end)
+        threadClick = nil
+    end
+end
+
+-- ============ UI ============
+
+CombatTab.AddToggle("Auto Click", false, function(value)
+        autoClickAtivo = value
+        if value then
+            iniciarAutoClick()
+        else
+            pararAutoClick()
+        end
+    end)
+
+-- ============ AUTO WALK CORRIGIDO ============
+
+local PROFUNDIDADE = 15
+local TAMANHO_PLATAFORMA = 10000
+local OFFSET_ALTURA = 3
+local DISTANCIA_PARAR = 3
+local DISTANCIA_SUBIR = 6
+local VELOCIDADE_SUBIR = 0.15
+local INTERVALO_CLIQUE = 0.1
+
+-- Estado
+local autoWalkMode = nil -- "money", "hittable" ou nil
+local plataforma = nil
+local threadAtual = nil
+local threadClicks = nil
+local alvoAtual = nil
+local estaEmBaixo = false
+local subindo = false
+
+-- Guarda a física original de cada parte
+local originalCollision = {}
+
+-- Guarda a altura da superfície
+local surfaceY = nil
+
+-- ============ BASE ============
+
+local function getParts()
+    local char = LocalPlayer.Character
+    if not char then
+        return nil, nil, nil
+    end
+
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+    local root = char:FindFirstChild("HumanoidRootPart")
+
+    return char, humanoid, root
+end
+
+local function distanciaXZ(a, b)
+    local dx = a.X - b.X
+    local dz = a.Z - b.Z
+
+    return math.sqrt(dx * dx + dz * dz)
+end
+
+-- ============ PLATAFORMA ============
+
+local function criarPlataforma(hrp)
+    if plataforma and plataforma.Parent then
+        return
+    end
+
+    plataforma = Instance.new("Part")
+    plataforma.Name = "SpoofHub_AutoWalkPlatform"
+    plataforma.Size = Vector3.new(
+        TAMANHO_PLATAFORMA,
+        1,
+        TAMANHO_PLATAFORMA
+    )
+
+    plataforma.Anchored = true
+    plataforma.CanCollide = true
+    plataforma.CanTouch = false
+    plataforma.CanQuery = false
+    plataforma.Transparency = 1
+
+    plataforma.CFrame = CFrame.new(
+        hrp.Position.X,
+        hrp.Position.Y - PROFUNDIDADE - OFFSET_ALTURA,
+        hrp.Position.Z
+    )
+
+    plataforma.Parent = workspace
+end
+
+local function removerPlataforma()
+    if plataforma then
+        pcall(function()
+            plataforma:Destroy()
+        end)
+
+        plataforma = nil
+    end
+end
+
+-- ============ NOCLIP SEGURO ============
+
+local function aplicarNoclip(char)
+    if not char or not char.Parent then
+        return
+    end
+
+    originalCollision = {}
+
+    for _, parte in ipairs(char:GetDescendants()) do
+        if parte:IsA("BasePart") then
+            originalCollision[parte] = parte.CanCollide
+            parte.CanCollide = false
+        end
+    end
+end
+
+local function restaurarFisica(char)
+    if not char then
+        originalCollision = {}
+        return
+    end
+
+    for parte, valorOriginal in pairs(originalCollision) do
+        if parte and parte.Parent then
+            pcall(function()
+                parte.CanCollide = valorOriginal
+            end)
+        end
+    end
+
+    originalCollision = {}
+end
+
+-- ============ BUSCAR ALVO ============
+
+local function acharMaisProximo(nome)
+    local _, _, root = getParts()
+
+    if not root then
+        return nil
+    end
+
+    local maisPerto = nil
+    local menorDist = math.huge
+
+    for _, obj in ipairs(workspace:GetDescendants()) do
+        if obj:IsA("BasePart")
+            and obj.Name == nome
+            and obj.Parent then
+
+            local dist = distanciaXZ(
+                obj.Position,
+                root.Position
+            )
+
+            if dist < menorDist then
+                menorDist = dist
+                maisPerto = obj
+            end
+        end
+    end
+
+    return maisPerto
+end
+
+-- ============ CLICAR ============
+
+local function pararCliques()
+    if threadClicks then
+        pcall(function()
+            task.cancel(threadClicks)
+        end)
+
+        threadClicks = nil
+    end
+end
+
+local function iniciarCliques()
+    if threadClicks then
+        return
+    end
+
+    threadClicks = task.spawn(function()
+        while autoWalkMode == "hittable"
+            and not estaEmBaixo do
+
+            local camera = workspace.CurrentCamera
+
+            if camera then
+                pcall(function()
+                    VirtualUser:Button1Down(
+                        Vector2.new(0, 0),
+                        camera.CFrame
+                    )
+
+                    VirtualUser:Button1Up(
+                        Vector2.new(0, 0),
+                        camera.CFrame
+                    )
+                end)
+            end
+
+            task.wait(INTERVALO_CLIQUE)
+        end
+
+        threadClicks = nil
+    end)
+end
+
+-- ============ SUBIR ============
+
+local function subir()
+    if subindo or not estaEmBaixo then
+        return
+    end
+
+    subindo = true
+
+    local _, _, hrp = getParts()
+
+    if hrp then
+        hrp.CFrame = hrp.CFrame + Vector3.new(
+            0,
+            PROFUNDIDADE,
+            0
+        )
+
+        estaEmBaixo = false
+    end
+
+    task.wait(VELOCIDADE_SUBIR)
+
+    subindo = false
+end
+
+-- ============ DESCER ============
+
+local function descer()
+    if subindo or estaEmBaixo then
+        return
+    end
+
+    subindo = true
+
+    local _, _, hrp = getParts()
+
+    if hrp then
+        hrp.CFrame = hrp.CFrame - Vector3.new(
+            0,
+            PROFUNDIDADE,
+            0
+        )
+
+        estaEmBaixo = true
+    end
+
+    task.wait(VELOCIDADE_SUBIR)
+
+    subindo = false
+end
+
+-- ============ CAMINHAR ============
+
+local function darUmPasso(part)
+    local _, humanoid, root = getParts()
+
+    if not humanoid or not root then
+        return
+    end
+
+    if humanoid.Health <= 0 then
+        return
+    end
+
+    if not part or not part.Parent then
+        return
+    end
+
+    local alvoPos = Vector3.new(
+        part.Position.X,
+        root.Position.Y,
+        part.Position.Z
+    )
+
+    if distanciaXZ(root.Position, alvoPos) <= DISTANCIA_PARAR then
+        humanoid:MoveTo(root.Position)
+        return
+    end
+
+    humanoid:MoveTo(alvoPos)
+end
+
+-- ============ RESTAURAR SUPERFÍCIE ============
+
+local function voltarParaSuperficie()
+    local _, humanoid, hrp = getParts()
+
+    if not hrp then
+        return
+    end
+
+    -- Se estava embaixo, simplesmente volta para a altura original.
+    -- Não fazemos mais outro "descender", evitando ficar preso
+    -- debaixo do mapa.
+    if surfaceY then
+        local diferencaY = surfaceY - hrp.Position.Y
+
+        hrp.CFrame = hrp.CFrame + Vector3.new(
+            0,
+            diferencaY,
+            0
+        )
+    end
+
+    estaEmBaixo = false
+
+    if humanoid then
+        humanoid:MoveTo(hrp.Position)
+    end
+end
+
+-- ============ LIMPEZA COMPLETA ============
+
+local function limparAutoWalk()
+    -- Primeiro impede novos loops
+    autoWalkMode = nil
+
+    -- Para os cliques
+    pararCliques()
+
+    -- Cancela o loop principal
+    if threadAtual then
+        pcall(function()
+            task.cancel(threadAtual)
+        end)
+
+        threadAtual = nil
+    end
+
+    subindo = false
+    alvoAtual = nil
+
+    -- Volta para a superfície ANTES de remover a plataforma
+    voltarParaSuperficie()
+
+    -- Restaura exatamente a física original
+    local char = LocalPlayer.Character
+
+    if char then
+        restaurarFisica(char)
+    else
+        originalCollision = {}
+    end
+
+    -- Agora remove a plataforma
+    removerPlataforma()
+
+    surfaceY = nil
+    estaEmBaixo = false
+end
+
+-- ============ LOOP PRINCIPAL ============
+
+local function iniciarAutoWalk(nomeAlvo, modo)
+    -- Garante que não exista outro Auto Walk executando
+    limparAutoWalk()
+
+    local char, humanoid, hrp = getParts()
+
+    if not char or not humanoid or not hrp then
+        return
+    end
+
+    if humanoid.Health <= 0 then
+        return
+    end
+
+    autoWalkMode = modo
+
+    -- Guarda a altura REAL antes de descer
+    surfaceY = hrp.Position.Y
+
+    alvoAtual = nil
+    estaEmBaixo = false
+    subindo = false
+
+    -- Cria a plataforma antes de descer
+    criarPlataforma(hrp)
+
+    -- Salva a física original
+    aplicarNoclip(char)
+
+    -- Desce
+    hrp.CFrame = hrp.CFrame - Vector3.new(
+        0,
+        PROFUNDIDADE,
+        0
+    )
+
+    estaEmBaixo = true
+
+    threadAtual = task.spawn(function()
+        while autoWalkMode == modo do
+            task.wait(0.15)
+
+            -- Verifica se o personagem ainda existe
+            local currentChar, currentHumanoid, currentRoot = getParts()
+
+            if not currentChar
+                or not currentHumanoid
+                or not currentRoot
+                or currentHumanoid.Health <= 0 then
+
+                break
+            end
+
+            -- Procura alvo
+            if alvoAtual and not alvoAtual.Parent then
+                alvoAtual = nil
+            end
+
+            local novoAlvo = acharMaisProximo(nomeAlvo)
+
+            if novoAlvo then
+                if not alvoAtual then
+                    alvoAtual = novoAlvo
+                else
+                    local distAtual = distanciaXZ(
+                        alvoAtual.Position,
+                        currentRoot.Position
+                    )
+
+                    local distNovo = distanciaXZ(
+                        novoAlvo.Position,
+                        currentRoot.Position
+                    )
+
+                    if distNovo < distAtual then
+                        alvoAtual = novoAlvo
+                    end
+                end
+            end
+
+            -- Sem alvo
+            if not alvoAtual or not alvoAtual.Parent then
+                if modo == "hittable" and not estaEmBaixo then
+                    pararCliques()
+                    descer()
+                end
+
+                continue
+            end
+
+            local dist = distanciaXZ(
+                alvoAtual.Position,
+                currentRoot.Position
+            )
+
+            -- =========================
+            -- AUTO ATM / Hittable
+            -- =========================
+            if modo == "hittable" then
+
+                if dist <= DISTANCIA_SUBIR then
+                    -- Chegou perto
+                    if estaEmBaixo then
+                        subir()
+                    end
+
+                    iniciarCliques()
+
+                    currentHumanoid:MoveTo(
+                        currentRoot.Position
+                    )
+
+                else
+                    -- Está longe
+                    pararCliques()
+
+                    if not estaEmBaixo then
+                        descer()
+                    end
+
+                    darUmPasso(alvoAtual)
+                end
+
+            -- =========================
+            -- AUTO MONEY
+            -- =========================
+            elseif modo == "money" then
+
+                darUmPasso(alvoAtual)
+
+                if dist <= DISTANCIA_PARAR then
+                    alvoAtual = nil
+                end
+            end
+        end
+
+        -- Se o loop terminou por algum motivo,
+        -- só limpa se ainda for o mesmo modo.
+        if autoWalkMode == modo then
+            limparAutoWalk()
+        end
+    end)
+end
+
+-- ============ UI ============
+
+FarmTab.AddSection("Auto Walk")
+
+FarmTab.AddToggle("Auto Money", false, function(value)
+        if value then
+            -- Desliga completamente o outro modo
+            limparAutoWalk()
+
+            iniciarAutoWalk(
+                "MoneyHitbox",
+                "money"
+            )
+        else
+            -- Só limpa se Auto Money estiver ativo
+            if autoWalkMode == "money" then
+                limparAutoWalk()
+            end
+        end
+    end)
+
+FarmTab.AddToggle("Auto ATM", false, function(value)
+        if value then
+            -- Desliga completamente o outro modo
+            limparAutoWalk()
+
+            iniciarAutoWalk(
+                "HittableHit",
+                "hittable"
+            )
+        else
+            -- Só limpa se Auto ATM estiver ativo
+            if autoWalkMode == "hittable" then
+                limparAutoWalk()
+            end
+        end
+    end)
+
+-- ============ COMBAT ESP HIGHLIGHT ============
+
+local CombatESPEnabled = false
+local CombatESPFolder = Instance.new("Folder")
+CombatESPFolder.Name = "SpoofHub_CombatESP"
+CombatESPFolder.Parent = game.CoreGui
+
+local function removeCombatESP()
+    for _, obj in ipairs(CombatESPFolder:GetChildren()) do
+        pcall(function()
+            obj:Destroy()
+        end)
+    end
+end
+
+local function addCombatESP(character)
+    if not CombatESPEnabled then
+        return
+    end
+
+    if not character or not character.Parent then
+        return
+    end
+
+    if character == LocalPlayer.Character then
+        return
+    end
+
+    if not character:FindFirstChildOfClass("Humanoid") then
+        return
+    end
+
+    -- Evita duplicados
+    if character:FindFirstChild("SpoofHub_CombatHighlight") then
+        return
+    end
+
+    pcall(function()
+        local highlight = Instance.new("Highlight")
+        highlight.Name = "SpoofHub_CombatHighlight"
+        highlight.Adornee = character
+
+        highlight.FillColor = Color3.fromRGB(255, 0, 0)
+        highlight.OutlineColor = Color3.fromRGB(255, 0, 0)
+
+        highlight.FillTransparency = 0.5
+        highlight.OutlineTransparency = 0
+
+        highlight.Parent = character
+    end)
+end
+
+local function updateCombatESP()
+    if not CombatESPEnabled then
+        return
+    end
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            if player.Character then
+                addCombatESP(player.Character)
+            end
+        end
+    end
+end
+
+CombatTab.AddToggle("ESP Highlight", false, function(Value)
+        CombatESPEnabled = Value
+
+        if Value then
+            updateCombatESP()
+        else
+            removeCombatESP()
+
+            -- Remove também highlights antigos
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player.Character then
+                    local old = player.Character:FindFirstChild(
+                        "SpoofHub_CombatHighlight"
+                    )
+
+                    if old then
+                        pcall(function()
+                            old:Destroy()
+                        end)
+                    end
+                end
+            end
+        end
+    end)
+
+-- Detecta respawn de jogadores
+for _, player in ipairs(Players:GetPlayers()) do
+    if player ~= LocalPlayer then
+        player.CharacterAdded:Connect(function(character)
+            task.wait(0.3)
+
+            if CombatESPEnabled then
+                addCombatESP(character)
+            end
+        end)
+    end
+end
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+
+local Player = Players.LocalPlayer
+local PlayerGui = Player:WaitForChild("PlayerGui")
+
+local BlueESPEnabled = false
+local YellowESPEnabled = false
+local HighestESPEnabled = false
+
+local ESPFolder = Instance.new("Folder")
+ESPFolder.Name = "ShopESP"
+ESPFolder.Parent = Workspace
+
+--------------------------------------------------
+-- AVISO NO TOPO DA TELA
+--------------------------------------------------
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "HighestPriceNotification"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = PlayerGui
+
+local Notification = Instance.new("TextLabel")
+Notification.Name = "HighestPrice"
+Notification.AnchorPoint = Vector2.new(0.5, 0)
+Notification.Position = UDim2.new(0.5, 0, 0, 0)
+Notification.Size = UDim2.fromOffset(300, 45)
+Notification.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Notification.BackgroundTransparency = 0.15
+Notification.BorderSizePixel = 0
+Notification.TextColor3 = Color3.fromRGB(255, 60, 60)
+Notification.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Notification.TextStrokeTransparency = 0
+Notification.Font = Enum.Font.GothamBold
+Notification.TextSize = 30
+Notification.Text = ""
+Notification.Visible = false
+Notification.Parent = ScreenGui
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0, 10)
+Corner.Parent = Notification
+
+--------------------------------------------------
+-- CORES
+--------------------------------------------------
+
+local function isBlue(color)
+	return color.B > color.R * 1.5
+		and color.B > color.G * 0.95
+end
+
+local function isYellow(color)
+	return color.R > color.B * 1.5
+		and color.G > color.B * 1.5
+		and color.R > 0.5
+		and color.G > 0.5
+end
+
+--------------------------------------------------
+-- PEGAR PREÇO
+--------------------------------------------------
+
+local function getPrice(text)
+	local price = text:match("%$%s*([%d%.,]+)")
+
+	if not price then
+		return nil
+	end
+
+	price = price:gsub(",", "")
+
+	return tonumber(price)
+end
+
+--------------------------------------------------
+-- ESP NORMAL
+--------------------------------------------------
+
+local function createESP(label, color, category, index)
+
+	if not label:IsA("TextLabel") then
+		return
+	end
+
+	if label:FindFirstAncestor("ShopESP") then
+		return
+	end
+
+	if not string.find(label.Text, "$", 1, true) then
+		return
+	end
+
+	local part = label:FindFirstAncestorWhichIsA("BasePart")
+
+	if not part then
+		return
+	end
+
+	local billboard = Instance.new("BillboardGui")
+	billboard.Name = category .. "_" .. index
+	billboard.Adornee = part
+	billboard.Size = UDim2.fromOffset(40, 40)
+	billboard.StudsOffset = Vector3.new(0, 2.5, 0)
+	billboard.AlwaysOnTop = true
+	billboard.MaxDistance = 300
+	billboard.Parent = ESPFolder
+
+	local text = Instance.new("TextLabel")
+	text.Size = UDim2.fromScale(1, 1)
+	text.BackgroundTransparency = 1
+	text.Text = label.Text
+	text.TextColor3 = color
+	text.Font = label.Font
+	text.TextSize = 20
+	text.TextScaled = false
+	text.TextStrokeColor3 = label.TextStrokeColor3
+	text.TextStrokeTransparency = label.TextStrokeTransparency
+	text.Parent = billboard
+end
+
+--------------------------------------------------
+-- ESP DO MAIOR PREÇO
+--------------------------------------------------
+
+local function createHighestESP(label, part)
+
+	local billboard = Instance.new("BillboardGui")
+	billboard.Name = "HighestPriceESP"
+	billboard.Adornee = part
+	billboard.Size = UDim2.fromOffset(400, 100)
+	billboard.StudsOffset = Vector3.new(0, 5, 0)
+	billboard.AlwaysOnTop = true
+	billboard.MaxDistance = 1000
+	billboard.Parent = ESPFolder
+
+	local text = Instance.new("TextLabel")
+	text.Size = UDim2.fromScale(1, 1)
+	text.BackgroundTransparency = 1
+	text.Text = label.Text
+	text.TextColor3 = Color3.fromRGB(255, 0, 0)
+	text.Font = Enum.Font.GothamBold
+	text.TextSize = 50
+	text.TextStrokeColor3 = Color3.new(0, 0, 0)
+	text.TextStrokeTransparency = 0
+	text.Parent = billboard
+end
+
+--------------------------------------------------
+-- ATUALIZA TEXTO DO TOPO
+--------------------------------------------------
+
+local function showHighestPrice(text)
+
+	Notification.Text = "highest price: " .. text
+	Notification.Visible = true
+
+end
+
+local function hideHighestPrice()
+
+	Notification.Text = ""
+	Notification.Visible = false
+
+end
+
+--------------------------------------------------
+-- LIMPAR
+--------------------------------------------------
+
+local function clearESP()
+	ESPFolder:ClearAllChildren()
+end
+
+--------------------------------------------------
+-- ATUALIZAR
+--------------------------------------------------
+
+local function updateESP()
+
+	clearESP()
+
+	local index = 0
+
+	local highestPrice = -math.huge
+	local highestLabel = nil
+	local highestPart = nil
+
+	for _, object in ipairs(Workspace:GetDescendants()) do
+
+		if object:IsA("TextLabel")
+			and not object:FindFirstAncestor("ShopESP") then
+
+			local price = getPrice(object.Text)
+
+			if price then
+
+				local part =
+					object:FindFirstAncestorWhichIsA("BasePart")
+
+				if part and price > highestPrice then
+
+					highestPrice = price
+					highestLabel = object
+					highestPart = part
+
+				end
+
+				if BlueESPEnabled
+					and isBlue(object.TextColor3) then
+
+					index += 1
+
+					createESP(
+						object,
+						object.TextColor3,
+						"Blue",
+						index
+					)
+
+				end
+
+				if YellowESPEnabled
+					and isYellow(object.TextColor3) then
+
+					index += 1
+
+					createESP(
+						object,
+						object.TextColor3,
+						"Yellow",
+						index
+					)
+
+				end
+
+			end
+		end
+	end
+
+	--------------------------------------------------
+	-- MAIOR PREÇO
+	--------------------------------------------------
+
+	if HighestESPEnabled
+		and highestLabel
+		and highestPart then
+
+		createHighestESP(
+			highestLabel,
+			highestPart
+		)
+
+		showHighestPrice(highestLabel.Text)
+
+	else
+		hideHighestPrice()
+	end
+end
+
+--------------------------------------------------
+-- ATUALIZA A CADA 5 SEGUNDOS
+--------------------------------------------------
+
+task.spawn(function()
+
+	while true do
+
+		task.wait(5)
+
+		if BlueESPEnabled
+			or YellowESPEnabled
+			or HighestESPEnabled then
+
+			updateESP()
+
+		end
+
+	end
+
+end)
+
+--------------------------------------------------
+-- RAYFIELD
+--------------------------------------------------
+
+ShopTab.AddToggle("ESP Blue", false, function(Value)
+
+		BlueESPEnabled = Value
+		updateESP()
+    end)
+
+ShopTab.AddToggle("ESP Yellow", false, function(Value)
+
+		YellowESPEnabled = Value
+		updateESP()
+    end)
+
+ShopTab.AddToggle("ESP Highest Price", false, function(Value)
+
+		HighestESPEnabled = Value
+		updateESP()
+end)
+
+-- ================= NoClip =================
+local noclipEnabled = false
+local originalCollision = {}
+
+PlayerTab.AddToggle("NoClip", false, function(Value)
+        noclipEnabled = Value
+
+        local character = LocalPlayer.Character
+        if not character then
+            return
+        end
+
+        if Value then
+            -- Guarda o estado original
+            originalCollision = {}
+
+            for _, part in ipairs(character:GetDescendants()) do
+                if part:IsA("BasePart") then
+                    originalCollision[part] = part.CanCollide
+                    part.CanCollide = false
+                end
+            end
+
+        else
+            -- Restaura exatamente como estava antes
+            for part, originalValue in pairs(originalCollision) do
+                if part and part.Parent then
+                    part.CanCollide = originalValue
+                end
+            end
+
+            originalCollision = {}
+        end
+    end)
+
+RunService.Stepped:Connect(function()
+    if noclipEnabled and LocalPlayer.Character then
+        for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+    end
+end)
+
+--// SERVICES
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+
+--// VARS
+local flying = false
+local flySpeed = 16
+local bodyVelocity
+local bodyGyro
+local connection
+
+--// PEGAR CONTROL MODULE
+local function getControlModule()
+    local ok, module = pcall(function()
+        return require(
+            player:WaitForChild("PlayerScripts")
+                :WaitForChild("PlayerModule")
+                :WaitForChild("ControlModule")
+        )
+    end)
+
+    return ok and module or nil
+end
+
+local controlModule = getControlModule()
+
+--// PEGAR ROOT
+local function getRoot()
+    local char = player.Character or player.CharacterAdded:Wait()
+    return char:WaitForChild("HumanoidRootPart")
+end
+
+--// PARAR FLY
+local function stopFly()
+    flying = false
+
+    if connection then
+        connection:Disconnect()
+        connection = nil
+    end
+
+    if bodyVelocity then
+        bodyVelocity:Destroy()
+        bodyVelocity = nil
+    end
+
+    if bodyGyro then
+        bodyGyro:Destroy()
+        bodyGyro = nil
+    end
+end
+
+--// INICIAR FLY
+local function startFly()
+    local root = getRoot()
+
+    stopFly()
+
+    flying = true
+
+    bodyVelocity = Instance.new("BodyVelocity")
+    bodyVelocity.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+    bodyVelocity.Velocity = Vector3.zero
+    bodyVelocity.Parent = root
+
+    bodyGyro = Instance.new("BodyGyro")
+    bodyGyro.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+    bodyGyro.P = 10000
+    bodyGyro.CFrame = root.CFrame
+    bodyGyro.Parent = root
+
+    connection = RunService.Heartbeat:Connect(function()
+        if not flying or not bodyVelocity or not bodyGyro then
+            return
+        end
+
+        if not root.Parent then
+            stopFly()
+            return
+        end
+
+        local camera = workspace.CurrentCamera
+        if not camera then
+            return
+        end
+
+        local moveVec = Vector3.zero
+
+        if controlModule then
+            moveVec = controlModule:GetMoveVector()
+        end
+
+        local velocity = Vector3.zero
+
+        if moveVec.Magnitude > 0 then
+            local direction = camera.CFrame:VectorToWorldSpace(moveVec)
+
+            if direction.Magnitude > 0 then
+                velocity = direction.Unit * flySpeed
+            end
+        end
+
+        bodyVelocity.Velocity = velocity
+        bodyGyro.CFrame = camera.CFrame
+    end)
+end
+
+--// TOGGLE
+local function toggleFly(state)
+    if state then
+        startFly()
+    else
+        stopFly()
+    end
+end
+
+--// BOTÃO NO PLAYERTAB
+PlayerTab.AddToggle("Fly", false, function(Value)
+        toggleFly(Value)
+    end)
+
+--// MORTE / RESPAWN
+player.CharacterAdded:Connect(function()
+    stopFly()
+end)
