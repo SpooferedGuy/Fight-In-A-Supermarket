@@ -744,11 +744,34 @@ FarmTab.AddToggle("Auto ATM", false, function(value)
 -- ============ COMBAT ESP HIGHLIGHT ============
 
 local CombatESPEnabled = false
+
 local CombatESPFolder = Instance.new("Folder")
 CombatESPFolder.Name = "SpoofHub_CombatESP"
 CombatESPFolder.Parent = game.CoreGui
 
+local function removeCharacterESP(character)
+    if not character then
+        return
+    end
+
+    local highlight = character:FindFirstChild("SpoofHub_CombatHighlight")
+
+    if highlight then
+        pcall(function()
+            highlight:Destroy()
+        end)
+    end
+end
+
 local function removeCombatESP()
+    -- Remove highlights dos personagens
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character then
+            removeCharacterESP(player.Character)
+        end
+    end
+
+    -- Limpa também qualquer objeto restante na pasta
     for _, obj in ipairs(CombatESPFolder:GetChildren()) do
         pcall(function()
             obj:Destroy()
@@ -780,6 +803,7 @@ local function addCombatESP(character)
 
     pcall(function()
         local highlight = Instance.new("Highlight")
+
         highlight.Name = "SpoofHub_CombatHighlight"
         highlight.Adornee = character
 
@@ -799,51 +823,53 @@ local function updateCombatESP()
     end
 
     for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer then
-            if player.Character then
-                addCombatESP(player.Character)
-            end
+        if player ~= LocalPlayer and player.Character then
+            addCombatESP(player.Character)
         end
     end
 end
 
-CombatTab.AddToggle("ESP Highlight", false, function(Value)
-        CombatESPEnabled = Value
+local function setupPlayer(player)
+    if player == LocalPlayer then
+        return
+    end
 
-        if Value then
-            updateCombatESP()
-        else
-            removeCombatESP()
+    player.CharacterAdded:Connect(function(character)
+        -- Espera o personagem carregar
+        task.wait(0.3)
 
-            -- Remove também highlights antigos
-            for _, player in ipairs(Players:GetPlayers()) do
-                if player.Character then
-                    local old = player.Character:FindFirstChild(
-                        "SpoofHub_CombatHighlight"
-                    )
-
-                    if old then
-                        pcall(function()
-                            old:Destroy()
-                        end)
-                    end
-                end
-            end
+        if CombatESPEnabled then
+            addCombatESP(character)
         end
     end)
-
--- Detecta respawn de jogadores
-for _, player in ipairs(Players:GetPlayers()) do
-    if player ~= LocalPlayer then
-        player.CharacterAdded:Connect(function(character)
-            task.wait(0.3)
-
-            if CombatESPEnabled then
-                addCombatESP(character)
-            end
-        end)
-    end
 end
+
+-- Toggle
+CombatTab.AddToggle("ESP Highlight", false, function(Value)
+    CombatESPEnabled = Value
+
+    if Value then
+        updateCombatESP()
+    else
+        removeCombatESP()
+    end
+end)
+
+-- Jogadores que já estão no servidor
+for _, player in ipairs(Players:GetPlayers()) do
+    setupPlayer(player)
+end
+
+-- Jogadores que entrarem depois
+Players.PlayerAdded:Connect(function(player)
+    setupPlayer(player)
+
+    -- Caso o personagem já esteja disponível
+    if CombatESPEnabled and player.Character then
+        task.wait(0.3)
+        addCombatESP(player.Character)
+    end
+end)
 
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
