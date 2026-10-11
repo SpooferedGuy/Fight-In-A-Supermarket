@@ -1,7 +1,7 @@
 local Build = loadstring(game:HttpGet("https://raw.githubusercontent.com/SpooferedGuy/UI-Library-Spoof/main/Ui-Library.lua"))()
 local UI = Build({
     Title = "Spoof Hub, by SpooferedGuy",
-    ScriptName = "SpoofHub - Fight In A Supermarket",
+    ScriptName = "SpoofHub - FightInASupermarket",
 })
 
 local CombatTab = UI.CreateTab("Combat⚔️")
